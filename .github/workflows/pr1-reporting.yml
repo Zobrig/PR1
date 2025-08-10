@@ -21,5 +21,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Setup dependancies
         run: npm i
+
+      - name: Playwright-install
+        run: npx playwright install
+
       - name: Run tests
         run: npm run test
